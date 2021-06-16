@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marrakech Ryads Parc : Price </title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  </head>
+  <body class="bg-light">
+    
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <div class="mrp-logo">
+            <img class="d-block mx-auto mb-4" src="./assets/img/logo.png" alt="" width="150" height="150">
+          </div>
+          <h2>MRP Reservation</h2>
+          <p class="lead">Marrakech Ryads Parc Reservation Price Calculator.</p>
+        </div>
+    
+        <div class="row g-5">
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-primary">Your cart</span>
+              <span class="badge bg-primary rounded-pill">3</span>
+            </h4>
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Prix Adulte</h6>
+                  <small class="text-muted" id="d-a">Brief description</small>
+                </div>
+                <span class="text-muted"id="tt-a"></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Prix Enfants</h6>
+                  <small class="text-muted" id="d-e">Brief description</small>
+                </div>
+                <span class="text-muted" id="tt-e"></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Total tax</h6>
+                  <small class="text-muted" id="d-t">Brief description</small>
+                </div>
+                <span class="text-muted" id="tt-t"></span>
+              </li>
+           
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Total TTC (Dhs)</span>
+                <strong id="total">$20</strong>
+              </li>
+            </ul>
+    
+       
+          </div>
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Booking Information</h4>
+            <div class="needs-validation" novalidate="">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="price" class="form-label">Double Room Price</label>
+                  <input type="number" class="form-control" id="price" placeholder="" value="1120.00" required="">
+                  <div class="invalid-feedback">
+                    Valid Double Room Price is required.
+                  </div>
+                </div>
+    
+                <div class="col-sm-6">
+                  <label for="tax" class="form-label">Tax De Séjour </label>
+                  <input type="number" class="form-control" id="tax" placeholder="" value="19.80" required="">
+                  <div class="invalid-feedback">
+                    Valid Tax De Séjour is required.
+                  </div>
+                </div>
+                
+
+
+
+                <div class="col-sm-12">
+                    <h4 class="mb-3">Nombre de Personnes</h4>
+                </div>
+                  <div class="col-sm-6 card p-2">
+                    
+                        <label for="nbra" class="form-label">Nombre d'adulte</label>  
+                        <div class="input-group">
+                          <input type="number" class="form-control" placeholder="" value="1" id="nbra">
+                          <button type="submit" class="btn btn-success" id="btn-nbra">Add</button>
+                        </div>
+                    
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card p-2">
+                        <label for="nbra" class="form-label">Nombre d'adulte</label>  
+                          <h1 class="text-center" id="nbra-h1">1</h1>
+                          <button type="submit" class="btn btn-danger" id="btn-nbra-d">delete</button>
+                        
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 card p-2">
+                    
+                        <label for="nbre" class="form-label">Nombre d'enfant (Moin de 11.99ans)</label>  
+                        <div class="input-group">
+                          <input type="number" class="form-control" placeholder="" value="1" id="nbre">
+                          <button type="submit" class="btn btn-success" id="btn-nbre">Add</button>
+                        </div>
+                    
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card p-2">
+                        <label for="nbra" class="form-label">Nombre d'enfant</label>  
+                          <h1 class="text-center" id="nbre-h1">1</h1>
+                          <button type="submit" class="btn btn-danger" id="btn-nbre-d" >delete</button>
+                        
+                    </div>
+                  </div>
+
+                  
+                </div>
+          </div>
+        </div>
+      </main>
+    
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">©2021 Marrakech Ryads Parc</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+    </div>
+    
+    
+        <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+          <script src="./assets/script.js"></script>
+      
+    
+    </body>
+</html>
